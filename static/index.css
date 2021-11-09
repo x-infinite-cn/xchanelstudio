@@ -1,0 +1,22 @@
+body {
+  background: url('./background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#root {
+  position: relative;
+}
+
+#root #btn-contact-me {
+  width: 4rem;
+  font-size: 0.5rem;
+  padding: 5px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -2rem;
+  margin-top: 3rem;
+}

@@ -1,1 +1,50 @@
-test
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>xChanelStudio</title>
+    <link rel="stylesheet" href="./static/index.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script>
+      // REM LAYOUT
+      !(function (n) {
+        var e = n.document,
+          t = e.documentElement,
+          i = 720,
+          d = i / 100,
+          o = 'orientationchange' in n ? 'orientationchange' : 'resize',
+          a = function () {
+            var n = t.clientWidth || 320;
+            n > 720 && (n = 720);
+            t.style.fontSize = n / d + 'px';
+          };
+        e.addEventListener && (n.addEventListener(o, a, !1), e.addEventListener('DOMContentLoaded', a, !1));
+      })(window);
+    </script>
+    <script>
+      $(document).ready(function () {
+        var viewPortHeight = window.innerHeight;
+        var viewPortWidth = window.innerWidth;
+        $('#root').width = viewPortWidth;
+        $('#root').height = viewPortHeight;
+        $('#btn-contact-me').click(() => {
+          if (window.navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+            window.location.href = 'https://wa.me/13138891029';
+          } else if (window.navigator.userAgent.match(/android/i)) {
+            window.location.href = 'https://wa.me/13138891029';
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div id="btn-contact-me">
+        <span> Contact Me</span>
+        <!-- 短链为 https://wa.me/+86136****1234  -->
+        <img width="30px" src="./static/whatsapp.png" />
+      </div>
+    </div>
+  </body>
+</html>
